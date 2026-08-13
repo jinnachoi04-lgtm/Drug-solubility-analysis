@@ -23,7 +23,7 @@ This project establishes an end-to-end Machine Learning pipeline utilizing the *
 ### 1. OS-Dependent Environment Alignment
 
 * **Challenge:** Environment paths diverged between OS shell configurations (`zsh` on macOS vs. Windows PowerShell), causing `ModuleNotFoundError` when the VS Code Jupyter extension targeted global system Python instead of the isolated virtual environment (`.venv`).
-* **Solution:** Standardized dependency injection within Jupyter execution contexts via inline package installation (`!pip install pandas scikit-learn matplotlib seaborn`) and manually bound the VS Code Jupyter kernel to the active `.venv` environment.
+* **Solution:** Standardized dependency injection within Jupyter execution contexts via inline package installation (`%pip install pandas scikit-learn matplotlib seaborn`) and manually bound the VS Code Jupyter kernel to the active `.venv` environment.
 
 ### 2. Ingestion & Server Rate Limiting (HTTP 429)
 
